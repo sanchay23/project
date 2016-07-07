@@ -29,8 +29,13 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="/registrations/new.html.erb" class="aa-register">Register</a>
-                  <a href="/sessions/new.html.erb" class="aa-login">Login</a>
+                  <% if user_signed_in? %>
+                    Signed in as <%= current_user.email %>. 
+                    Not you?
+                    <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+                  <% else %>
+                    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "Log In", new_user_session_path %>
+                  <% end %>
                 </div>
               </div>
             </div>
