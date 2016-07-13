@@ -10,7 +10,7 @@
                 <a class="aa-property-home" href="index.html">Property Home</a>
                 <h4>Sign in to your account</h4>
               </div>
-              <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "contactform") do |f| %>
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f| %>
                 <%= devise_error_messages! %>                                                 
                 <div class="aa-single-field">
                   <%= f.label :email %><br />

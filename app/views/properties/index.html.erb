@@ -1,0 +1,43 @@
+<div class="container-fluid">
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Properties</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+      <th rowspan="7"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.name %></td>
+        <td><%= property.category %></td>
+        <td><%= property.price %></td>
+        <td><%= property.address %></td>
+        <td><%= property.city %></td>
+        <td><%= property.state %></td>
+        <td><%= property.description %></td>
+        <td><%= image_tag property.image_url(:thumb) %></td>
+        <td><%= link_to 'Show', property, class: "btn-success" %></td>
+        <td><%= link_to 'Edit', edit_property_path(property), class: "btn-info" %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-danger" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Property', new_property_path,class: "btn btn-success" %>
+</div>

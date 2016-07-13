@@ -141,7 +141,7 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  background-color: #000000;
+  background-color: #87ceeb;
   width: 100%;
   z-index: 99;
 }
@@ -212,7 +212,7 @@ img {
   z-index: 99;
 }
 #aa-menu-area .main-navbar {
-  background-color: #000000;
+  background-color: transparent;
   border: medium none;
   border-radius: 0;
 }
